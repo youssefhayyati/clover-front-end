@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+.nuxt-icon svg {
+    margin-bottom: 0 !important;
+    height: auto !important;
+}
+
+#nt-container {
+  position: fixed;
+  top: 80px;
+  // left: 0;
+  right: 10px;
+  // bottom: 0;
+  overflow: hidden;
+  z-index: 100;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+#nt-container [role='alert'] {
+  pointer-events: auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 767px) {
+  #nt-container {
+    padding: 0;
+  }
+}
